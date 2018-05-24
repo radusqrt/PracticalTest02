@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PracticalTest02MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/operator1EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="operator1" />
+
+            <EditText
+                android:layout_below="@id/operator1EditText"
+                android:id="@+id/operator2EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="operator2" />
+
+            <EditText
+                android:id="@+id/operationEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/operator2EditText"
+                android:hint="operation" />
+
+            <EditText
+                android:id="@+id/clientServerPort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/operationEditText"
+                android:hint="port" />
+
+            <TextView
+                android:id="@+id/raspunsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/clientServerPort"
+                android:text="Raspuns" />
+
+            <Button
+                android:layout_below="@id/raspunsTextView"
+                android:id="@+id/clientSendButton"
+                android:text="SEND"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:hint="8001"
+                android:id="@+id/serverPortEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_toRightOf="@id/serverPortEditText"
+                android:id="@+id/serverStartButton"
+                android:text="START"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
